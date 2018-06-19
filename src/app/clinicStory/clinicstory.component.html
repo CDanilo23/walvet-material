@@ -1,0 +1,92 @@
+<section>
+<div class="container-fluid">
+  <form (ngSubmit)="saveValues()">
+    
+    
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <span>Walvet</span>
+          <span class="example-spacer"></span>
+          <mat-icon class="example-icon" [matMenuTriggerFor]="menu">menu</mat-icon>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        </mat-toolbar-row>
+      </mat-toolbar>
+
+      <br />
+    
+      
+    <div class="d-flex justify-content-center">
+   
+        <mat-form-field>
+                <input matInput placeholder="Nombre Mascota" required minlength="6" required [(ngModel)]="currentClinic.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+                <input matInput placeholder="Especie" required minlength="6" required [(ngModel)]="currentClinic.specie" name="specie">
+        </mat-form-field>
+        <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Fecha" [(ngModel)]="currentClinic.fecha">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker [(ngModel)]="currentClinic.fecha" ngDefaultControl (selectedChanged)="onDate($event)"></mat-datepicker>
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Raza" required minlength="6" required [(ngModel)]="currentClinic.race" name="race">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Color" required minlength="6" required [(ngModel)]="currentClinic.colour" name="colour">
+        </mat-form-field>
+
+        <mat-form-field>
+                <input matInput placeholder="Genero" required minlength="6" required [(ngModel)]="currentClinic.gender" name="gender">
+        </mat-form-field>    
+
+        <!--<mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Fecha de nacimiento" [(ngModel)]="currentClinic.born_date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker [(ngModel)]="currentClinic.born_date" ngDefaultControl (selectedChanged)="onDate($event)"></mat-datepicker>
+        </mat-form-field>-->
+        
+  
+    </div>
+       
+  
+
+    <div class="d-flex justify-content-start">
+        <div class="col-3">
+            <span class="input-group-addon">Historia</span>
+            <input type="text" class="form-control form-control-sm" required minlength="6" required [(ngModel)]="currentClinic.story" name="story">
+        </div>
+        <div class="col">
+                <span class="input-group-addon">Edad</span>
+                <input type="text" class="form-control form-control-sm" required minlength="6" required [(ngModel)]="currentClinic.age" name="age">
+            </div>
+            
+    </div>
+
+    <div class="d-flex justify-content-center">
+       
+        <div class="col">
+            <span class="input-group-addon">Propietario</span>
+            <input type="text" class="form-control form-control-sm" required minlength="6" required [(ngModel)]="currentClinic.owner" name="owner">
+        </div>
+        <div class="col">
+            <span class="input-group-addon">Dirección</span>
+            <input type="text" class="form-control form-control-sm" required minlength="6" required [(ngModel)]="currentClinic.adress" name="adress">
+        </div>
+        <div class="col">
+            <span class="input-group-addon">Phone</span>
+            <input type="text" class="form-control form-control-sm" required minlength="6" required [(ngModel)]="currentClinic.phone" name="phone">
+        </div>
+    </div>
+
+    <br />
+    <button type="submit" class="btn">Save</button>
+
+  </form>
+</div>
+
+</section>
