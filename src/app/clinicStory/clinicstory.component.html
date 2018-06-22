@@ -17,8 +17,6 @@
 
       <br />
     
-      
-   
         <mat-form-field>
                 <input matInput placeholder="Nombre Mascota" required minlength="6" required [(ngModel)]="currentClinic.name" name="name">
         </mat-form-field>
@@ -26,12 +24,12 @@
                 <input matInput placeholder="Especie" required minlength="6" required [(ngModel)]="currentClinic.specie" name="specie">
         </mat-form-field>
         <mat-form-field>
-                <input matInput [matDatepicker]="picker1" placeholder="Fecha" [(ngModel)]="currentClinic.fecha">
+                <input matInput [matDatepicker]="picker1" placeholder="Fecha" [formControl]="date">
                 <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                <mat-datepicker #picker1 [(ngModel)]="currentClinic.fecha" ngDefaultControl (selectedChanged)="onDate($event)"></mat-datepicker>
+                <mat-datepicker #picker1></mat-datepicker>
         </mat-form-field>
     
-        <mat-form-field>
+       <mat-form-field>
             <input matInput placeholder="Raza" required minlength="6" required [(ngModel)]="currentClinic.race" name="race">
         </mat-form-field>
         
@@ -44,9 +42,9 @@
         </mat-form-field>    
 
         <mat-form-field>
-                <input matInput [matDatepicker]="picker2" placeholder="Fecha de nacimiento" [(ngModel)]="currentClinic.born_date">
+                <input matInput [matDatepicker]="picker2" placeholder="Fecha Nacimiento" [formControl]="born_date">
                 <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-                <mat-datepicker #picker2 [(ngModel)]="currentClinic.born_date" ngDefaultControl (selectedChanged)="onDate($event)"></mat-datepicker>
+                <mat-datepicker #picker2></mat-datepicker>
         </mat-form-field>
         
         <mat-form-field>

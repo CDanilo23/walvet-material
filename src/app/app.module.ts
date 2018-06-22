@@ -16,11 +16,14 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material';
+import {ReactiveFormsModule} from '@angular/forms';
+import { ListClinicStoryComponent } from './clinicStory/list-clinic-story/list-clinic-story.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClinicstoryComponent
+    ClinicstoryComponent,
+    ListClinicStoryComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import {MatNativeDateModule} from '@angular/material';
     MatTabsModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ReactiveFormsModule
   ],
   exports: [
     MatInputModule,

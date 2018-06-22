@@ -2,7 +2,7 @@ export class Clinicstory {
     id: number;
     name: string;
     specie: string;
-    fecha: string;
+    fecha: Date;
     race: string;
     colour: string;
     gender: string;
@@ -12,7 +12,6 @@ export class Clinicstory {
     owner: string;
     adress: string;
     phone: string;
-    cellphone: string;
     anamesis: string;
     actitude: string;
 }
