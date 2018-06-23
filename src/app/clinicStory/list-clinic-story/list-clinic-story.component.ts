@@ -7,6 +7,8 @@ import {MatDatepickerModule, MatDatepicker} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material';
 import {MatListModule} from '@angular/material/list';
 import { Clinicstory } from '../clinicstory';
+import { ClinicstoryService } from '../../service/clinicstory.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-clinic-story',
@@ -17,9 +19,11 @@ export class ListClinicStoryComponent implements OnInit {
 
   stories: Clinicstory[] = [];
 
-  constructor() { }
+  constructor(private clinicstoryService: ClinicstoryService, private router: Router) { }
 
   ngOnInit() {
+    console.log('entro');
+    
   }
 
 }
