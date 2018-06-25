@@ -27,5 +27,4 @@ export class ListClinicStoryComponent implements OnInit {
       this.stories = p 
     });
   }
-
 }

@@ -13,7 +13,7 @@ export class Clinicstory {
     adress: string;
     phone: string;
     anamesis: string;
-    //examen clinico
+    // examen clinico
     actitud: string;
     temperamento: string;
     cc: string;
@@ -34,8 +34,4 @@ export class Clinicstory {
     pielAnexos: string;
     linfatico: string;
     nervioso: string;
-    listaProblemas: string [];
-    diagnosticosDiferenciales: string [];
-    planesDiagnosticos: string[];
-    
 }

@@ -1,3 +1,8 @@
+
+<head>
+    <link rel="stylesheet" href="https://bootswatch.com/4/pulse/bootstrap.min.css">
+</head>
+
 <section *ngIf="stories" class="panel-body">
 
     <input type="text" [(ngModel)]="term">
@@ -14,7 +19,7 @@
         <tbody>
             <tr class="table-active" *ngFor="let story of stories |filter:term">
               <td>
-                <a href="#" [routerLink]="['/clinicstory', clinicstory.id]">{{story.owner}}</a>
+                <a href="#" [routerLink]="['/clinicstory', story.id]">{{story.owner}}</a>
               </td>
               <td>
                 <a>{{story.phone}}</a>

@@ -18,6 +18,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ListClinicStoryComponent } from './clinicStory/list-clinic-story/list-clinic-story.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ListClinicStoryComponent } from './clinicStory/list-clinic-story/list-c
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   exports: [
     MatInputModule,
