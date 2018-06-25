@@ -13,5 +13,29 @@ export class Clinicstory {
     adress: string;
     phone: string;
     anamesis: string;
-    actitude: string;
+    //examen clinico
+    actitud: string;
+    temperamento: string;
+    cc: string;
+    peso: string;
+    mm: string;
+    tllc: string;
+    fc: string;
+    fr: string;
+    tp: string;
+    dh: string;
+    cavidadOral: string;
+    cavidadNasal: string;
+    ojosOidos: string;
+    cardioRespiratorio: string;
+    digestivo: string;
+    nefrourologico: string;
+    musculoEsqueletico: string;
+    pielAnexos: string;
+    linfatico: string;
+    nervioso: string;
+    listaProblemas: string [];
+    diagnosticosDiferenciales: string [];
+    planesDiagnosticos: string[];
+    
 }

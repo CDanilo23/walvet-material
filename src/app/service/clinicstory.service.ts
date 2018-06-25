@@ -20,9 +20,4 @@ export class ClinicstoryService {
       console.log(response);
       return response;
   }
-
-  put(story: Clinicstory): {
-    this.http.put(story);
-  }
-
 }

@@ -23,7 +23,9 @@ export class ListClinicStoryComponent implements OnInit {
 
   ngOnInit() {
     console.log('entro');
-    
+    return this.clinicstoryService.findAll().subscribe(p => {
+      this.stories = p 
+    });
   }
 
 }
