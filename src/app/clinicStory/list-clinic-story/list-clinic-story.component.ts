@@ -9,6 +9,9 @@ import {MatListModule} from '@angular/material/list';
 import { Clinicstory } from '../clinicstory';
 import { ClinicstoryService } from '../../service/clinicstory.service';
 import { Router } from '@angular/router';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {FormControl} from '@angular/forms';
+import {MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-list-clinic-story',
@@ -17,14 +20,19 @@ import { Router } from '@angular/router';
 })
 export class ListClinicStoryComponent implements OnInit {
 
+  myControl = new FormControl();
+
   stories: Clinicstory[] = [];
+
+  dataSource = null;
 
   constructor(private clinicstoryService: ClinicstoryService, private router: Router) { }
 
   ngOnInit() {
     console.log('entro');
-    return this.clinicstoryService.findAll().subscribe(p => {
+      this.clinicstoryService.findAll().subscribe(p => {
       this.stories = p 
     });
+    this.dataSource = new MatTableDataSource(this.stories);
   }
 }

@@ -19,12 +19,16 @@ import {MatNativeDateModule} from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ListClinicStoryComponent } from './clinicStory/list-clinic-story/list-clinic-story.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatTableModule} from '@angular/material/table';
+import { ClinicstorydetailsComponent } from './clinicstorydetails/clinicstorydetails.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClinicstoryComponent,
-    ListClinicStoryComponent
+    ListClinicStoryComponent,
+    ClinicstorydetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     MatDatepickerModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    MatAutocompleteModule,
+    MatTableModule
   ],
   exports: [
     MatInputModule,
