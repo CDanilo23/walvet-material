@@ -1,13 +1,63 @@
 <section>
     <div>
-      <form>
+      <form (ngSubmit)="editValues()">
 
           <br />
         
             <mat-form-field>
-                    <input matInput placeholder="Nombre Mascota" [ngModel]="clinicstory.name" name="name" readonly>
+                    <input matInput placeholder="Nombre Mascota" required minlength="6" required [(ngModel)]="story.name" name="name" [disabled]="enableAllInputs">
             </mat-form-field>
-          
+            <mat-form-field>
+                    <input matInput placeholder="Especie" required minlength="6" required [(ngModel)]="story.specie" name="specie" [disabled]="enableAllInputs">
+            </mat-form-field>
+            <mat-form-field>
+                    <input matInput [matDatepicker]="picker1" placeholder="Fecha" [formControl]="date" [disabled]="enableAllInputs">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1 ></mat-datepicker>
+            </mat-form-field>
+        
+           <mat-form-field>
+                <input matInput placeholder="Raza" required minlength="6" required [(ngModel)]="story.race" name="race" [disabled]="enableAllInputs">
+            </mat-form-field>
+            
+            <mat-form-field>
+                <input matInput placeholder="Color" required minlength="6" required [(ngModel)]="story.colour" name="colour" [disabled]="enableAllInputs">
+            </mat-form-field>
+    
+            <mat-form-field>
+                    <input matInput placeholder="Genero" required minlength="6" required [(ngModel)]="story.gender" name="gender" [disabled]="enableAllInputs">
+            </mat-form-field>    
+    
+            <mat-form-field>
+                    <input matInput [matDatepicker]="picker2" placeholder="Fecha Nacimiento" [formControl]="born_date" [disabled]="enableAllInputs">
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+            
+            <mat-form-field>
+                    <input matInput placeholder="Historia" required minlength="6" required [(ngModel)]="story.story" name="story" [disabled]="enableAllInputs">
+            </mat-form-field> 
+    
+            <mat-form-field>
+                    <input matInput placeholder="Edad" required minlength="6" required [(ngModel)]="story.age" name="age" [disabled]="enableAllInputs">
+            </mat-form-field> 
+    
+            <mat-form-field>
+                    <input matInput placeholder="Propietario" required minlength="6" required [(ngModel)]="story.owner" name="owner" [disabled]="enableAllInputs">
+            </mat-form-field> 
+    
+            <mat-form-field>
+                    <input matInput placeholder="Dirección" required minlength="6" required [(ngModel)]="story.adress" name="adress" [disabled]="enableAllInputs">
+            </mat-form-field>
+    
+            <mat-form-field>
+                    <input matInput placeholder="Phone" required minlength="6" required [(ngModel)]="story.phone" name="phone" [disabled]="enableAllInputs">
+            </mat-form-field>
+    
+        <br />
+        <button mat-raised-button color="primary" type="submit" class="btn" [disabled]="enableAllInputs">Guardar</button>
+        <button mat-raised-button color="primary" type="submit" class="btn" (click)="enableInputs()">Editar</button>    
+
       </form>
     </div>
     
