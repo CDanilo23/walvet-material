@@ -57,10 +57,10 @@ export class ClinicstorydetailsComponent implements OnInit, OnDestroy {
   }
 
   editValues(): void {
-    this.story.fecha = this.date.value;
+   /* this.story.fecha = this.date.value;
     console.log('converted ' +  this.story.fecha);
     this.story.born_date = this.born_date.value;
-    console.log('converted ' + this.story.born_date);
+    console.log('converted ' + this.story.born_date);*/
   }
 
 }

@@ -22,6 +22,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatTableModule} from '@angular/material/table';
 import { ClinicstorydetailsComponent } from './clinicstorydetails/clinicstorydetails.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ClinicstorydetailsComponent } from './clinicstorydetails/clinicstorydet
     ClinicstorydetailsComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     HttpModule,
     FormsModule,

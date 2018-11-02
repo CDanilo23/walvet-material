@@ -23,12 +23,12 @@
         <tbody>
             <tr class="table-active" *ngFor="let story of stories |filter:term">
               <td>
-                <a>{{story.owner}}</a>
+                <a>{{story.idStory}}</a>
               </td>
               <td>
-                <a>{{story.phone}}</a>
+                <a>{{story.userName}}</a>
               </td>
-              <td>
+              <!--<td>
                 <a>{{story.fecha | date :'short'}}</a>
               </td>
               <td>
@@ -36,7 +36,7 @@
               </td>
               <td>
                 <a>{{story.race}}</a>
-              </td>
+              </td>-->
               <td align="center">
                  
                     <a class="linkVerDetalle" href="#" [routerLink]="['/clinic-story-details', story.id]">

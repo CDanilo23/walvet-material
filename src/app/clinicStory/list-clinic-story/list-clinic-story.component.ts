@@ -23,6 +23,7 @@ export class ListClinicStoryComponent implements OnInit {
   myControl = new FormControl();
 
   stories: Clinicstory[] = [];
+  story: Clinicstory;
 
   dataSource = null;
 
@@ -30,9 +31,9 @@ export class ListClinicStoryComponent implements OnInit {
 
   ngOnInit() {
     console.log('entro');
-      this.clinicstoryService.findAll().subscribe(p => {
-      this.stories = p 
-    });
-    this.dataSource = new MatTableDataSource(this.stories);
+    /*  this.clinicstoryService.findAll().subscribe((data: Clinicstory)  => {
+      this.story = data;
+    });*/
+    this.clinicstoryService.findAll();
   }
 }

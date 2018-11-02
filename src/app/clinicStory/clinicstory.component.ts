@@ -45,10 +45,10 @@ export class ClinicstoryComponent implements OnInit {
   }
 
   saveValues(): void {
-      this.currentClinic.fecha = this.date.value;
+   /*   this.currentClinic.fecha = this.date.value;
       console.log('converted ' +  this.currentClinic.fecha);
       this.currentClinic.born_date = this.born_date.value;
-      console.log('converted ' + this.currentClinic.born_date);
+      console.log('converted ' + this.currentClinic.born_date);*/
   }
  }
 

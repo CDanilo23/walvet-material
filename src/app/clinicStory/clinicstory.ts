@@ -1,7 +1,7 @@
 export class Clinicstory {
-    id: number;
-    name: string;
-    specie: string;
+    // idStory: number;
+    userName: string;
+   /* specie: string;
     fecha: Date;
     race: string;
     colour: string;
@@ -33,5 +33,5 @@ export class Clinicstory {
     musculoEsqueletico: string;
     pielAnexos: string;
     linfatico: string;
-    nervioso: string;
+    nervioso: string;*/
 }
